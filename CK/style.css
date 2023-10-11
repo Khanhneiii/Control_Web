@@ -1,0 +1,440 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    margin: 0 auto;
+    /* padding: 1em; */
+    word-break: break-word;
+    line-height: 1.4;
+    color: #000000;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: white;
+    border-color: white;
+}
+
+h2 {
+    margin: 0.5em 0;
+}
+
+x canvas {
+    background-color: #f0f0f0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div#pairPage {
+    margin: 0 auto;
+    margin-top: 0.4em;
+    max-width: 60em;
+    padding: 0.3em 1.5em 1.3em 1.5em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    /* box-shadow: 0 0 20px rgba(78, 77, 77, 0.1); */
+}
+
+select {
+    margin: 0 1em 1em 0;
+    position: relative;
+    top: -1px;
+}
+
+input[type="radio"] {
+    position: relative;
+    top: -1px;
+}
+
+textarea {
+    resize: none;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+ul {
+    margin-block: 0;
+}
+
+fieldset {
+    margin: 0 0 1em 0;
+    border: none;
+}
+
+fieldset>select {
+    margin-top: 1em;
+}
+
+/* self defined css */
+/* Tab CSS */
+.topnav {
+    height: 9vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+
+    &:hover {
+        color: white;
+        background: rgba(102, 177, 241, 0.8);
+        transition: all 0.5s ease;
+    }
+}
+
+.tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 6px;
+    background: #66B1F1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0 0 0.8em 0;
+    padding: 0 0 0.2em 0;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+}
+
+h1:hover {
+    color: #3d85c6;
+    text-decoration: underline;
+}
+
+/* WIFI config */
+/* label {
+    /* font-style: bold; */
+/* } */
+
+.wifiGrid>input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.wifiGrid {
+    min-width: 80%;
+    margin: 0 auto;
+}
+
+/* Button */
+button {
+    width: 10%;
+    border: none;
+    color: #FEFCFB;
+    background-color: #034078;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #3d85c6;
+    color: white;
+    cursor: pointer;
+}
+
+button#sendMediaServerInfoButton {
+    width: 100%;
+}
+
+/* Gesture Control CSS*/
+div#gesturePage {
+    display: none;
+    padding: 0 10px 0 10px;
+    /* background-color: #ccc; */
+    height: 100vh;
+}
+
+div#gesturePage h2 {
+    margin: 0.6em auto;
+    width: fit-content;
+}
+
+/* Background */
+
+/* canvas#background {
+    position: absolute;
+    z-index: 1;
+    top:17vh;
+    left: 1vh;
+    height: 79vh;
+    margin: 0 1vh;
+    border: #000000 3px solid;
+} */
+
+/*Box grid*/
+div#content {
+    position: absolute;
+    z-index: 2;
+}
+
+div.box {
+    width: 100%;
+    height: 75vh;
+    display: grid;
+    /* padding: 10px; */
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 0.7fr 0.3fr;
+    gap: 10px;
+    /* border: 2px solid black; */
+    /* border-radius: 2px; */
+}
+
+canvas {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+video {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+
+textarea#messageView {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+div#box_button {
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+div#box_button>button {
+    width: 50%;
+    margin: 0 1%;
+}
+
+main {
+    /* background-color:#ccc ; */
+}
+
+/* Loading */
+#loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #317b8d65;
+}
+
+.loading {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    z-index: 9999;
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pop Up */
+/* div#popUpFrame{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #317b8d65;
+} */
+/* div#popUp {
+    position: relative;
+    width: 50%;
+    height: 30%;
+    border-radius: 20px;
+    background-color: rgb(159, 255, 164);
+} */
+#toasts {
+    position: fixed;
+    top: 9vh;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toast {
+    padding: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    animation: show_slide 1s ease forwards;
+    display: flex;
+    align-items: center;
+    border-left: 6px solid;
+}
+
+.toast.success {
+    background-color: rgba(0, 128, 0, 0.4);
+    border-color: rgb(0, 128, 0);
+}
+
+.toast.error {
+    background-color: rgba(255, 0, 0, 0.4);
+    border-color: rgb(255, 0, 0);
+}
+
+.toast.msg {
+    padding: 0 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.countdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 1;
+    animation: countdown 4s linear forwards;
+}
+
+.toast.success .countdown {
+    background-color: rgb(0, 128, 0);
+}
+
+.toast.error .countdown {
+    background-color: rgb(255, 0, 0);
+}
+
+@keyframes countdown {
+    20% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    40% {
+        transform: translateX(-10%);
+    }
+
+    80% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes hide_slide {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(0%);
+    }
+
+    80% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(120%);
+    }
+}
